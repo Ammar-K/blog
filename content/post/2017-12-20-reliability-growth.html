@@ -1,0 +1,156 @@
+---
+title: Reliability Growth
+author: Ammar Al-Khaldi
+date: '2017-12-20'
+slug: reliability-growth
+categories:
+  - Reliability
+tags:
+  - RGA
+  - R
+  - Reliability
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotlyjs/plotly-latest.min.js"></script>
+
+
+<p><img src="C:/Users/Cloud/Documents/R/blog/static/img/RGAheader.jpg"></p>
+<div id="what-is-the-reliability-growth" class="section level1">
+<h1>What is the Reliability Growth ?</h1>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>The Reliability Growth Analysis (RGA) is an analytical tool used to assess the change in the reliability of equipment, system or a plant. The output of the analysis is given as:-</p>
+<ul>
+<li>Trend showing the reliability change in terms of time(cycle, Km, ) on the X-axis and failure rate (or MTBF since it’s the inverse of failure rate) on the Y-axis.</li>
+</ul>
+<p><div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"x":[0.431363764158987,1.01283722470517,1.09691001300806,1.48572142648158,1.75587485567249,1.78746047451842,1.90308998699194,2.03941411917614,2.09691001300806,2.1092409685882,2.15775888604686,2.22505069613805,2.36021461329535,2.47231754631684,2.50596351801813,2.51613857671707,2.56371833996568,2.59846220047415,2.62438524142027,2.64167237322469,2.70001106232211,2.79239168949825],"y":[0,0.301029995663981,0.477121254719662,0.602059991327962,0.698970004336019,0.778151250383644,0.845098040014257,0.903089986991944,0.954242509439325,1,1.04139268515823,1.07918124604762,1.11394335230684,1.14612803567824,1.17609125905568,1.20411998265592,1.23044892137827,1.25527250510331,1.27875360095283,1.30102999566398,1.32221929473392,1.34242268082221],"text":["t:   2.7<br />event:  1","t:  10.3<br />event:  2","t:  12.5<br />event:  3","t:  30.6<br />event:  4","t:  57.0<br />event:  5","t:  61.3<br />event:  6","t:  80.0<br />event:  7","t: 109.5<br />event:  8","t: 125.0<br />event:  9","t: 128.6<br />event: 10","t: 143.8<br />event: 11","t: 167.9<br />event: 12","t: 229.2<br />event: 13","t: 296.7<br />event: 14","t: 320.6<br />event: 15","t: 328.2<br />event: 16","t: 366.2<br />event: 17","t: 396.7<br />event: 18","t: 421.1<br />event: 19","t: 438.2<br />event: 20","t: 501.2<br />event: 21","t: 620.0<br />event: 22"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,205,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,205,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.431363764158987,0.461250193593662,0.491136623028336,0.52102305246301,0.550909481897684,0.580795911332359,0.610682340767033,0.640568770201707,0.670455199636381,0.700341629071056,0.73022805850573,0.760114487940404,0.790000917375078,0.819887346809753,0.849773776244427,0.879660205679101,0.909546635113776,0.93943306454845,0.969319493983124,0.999205923417798,1.02909235285247,1.05897878228715,1.08886521172182,1.1187516411565,1.14863807059117,1.17852450002584,1.20841092946052,1.23829735889519,1.26818378832987,1.29807021776454,1.32795664719922,1.35784307663389,1.38772950606856,1.41761593550324,1.44750236493791,1.47738879437259,1.50727522380726,1.53716165324193,1.56704808267661,1.59693451211128,1.62682094154596,1.65670737098063,1.68659380041531,1.71648022984998,1.74636665928465,1.77625308871933,1.806139518154,1.83602594758868,1.86591237702335,1.89579880645803,1.9256852358927,1.95557166532737,1.98545809476205,2.01534452419672,2.0452309536314,2.07511738306607,2.10500381250075,2.13489024193542,2.16477667137009,2.19466310080477,2.22454953023944,2.25443595967412,2.28432238910879,2.31420881854347,2.34409524797814,2.37398167741281,2.40386810684749,2.43375453628216,2.46364096571684,2.49352739515151,2.52341382458619,2.55330025402086,2.58318668345553,2.61307311289021,2.64295954232488,2.67284597175956,2.70273240119423,2.73261883062891,2.76250526006358,2.79239168949825],"y":[0.00634546286615689,0.023520875369619,0.040696287873081,0.0578717003765431,0.0750471128800052,0.0922225253834672,0.109397937886929,0.126573350390391,0.143748762893853,0.160924175397316,0.178099587900778,0.19527500040424,0.212450412907702,0.229625825411164,0.246801237914626,0.263976650418088,0.28115206292155,0.298327475425012,0.315502887928474,0.332678300431936,0.349853712935398,0.36702912543886,0.384204537942322,0.401379950445785,0.418555362949247,0.435730775452709,0.452906187956171,0.470081600459633,0.487257012963095,0.504432425466557,0.521607837970019,0.538783250473481,0.555958662976943,0.573134075480405,0.590309487983867,0.607484900487329,0.624660312990791,0.641835725494253,0.659011137997716,0.676186550501178,0.69336196300464,0.710537375508102,0.727712788011564,0.744888200515026,0.762063613018488,0.77923902552195,0.796414438025412,0.813589850528874,0.830765263032336,0.847940675535798,0.86511608803926,0.882291500542723,0.899466913046185,0.916642325549647,0.933817738053109,0.950993150556571,0.968168563060033,0.985343975563495,1.00251938806696,1.01969480057042,1.03687021307388,1.05404562557734,1.07122103808081,1.08839645058427,1.10557186308773,1.12274727559119,1.13992268809465,1.15709810059812,1.17427351310158,1.19144892560504,1.2086243381085,1.22579975061196,1.24297516311543,1.26015057561889,1.27732598812235,1.29450140062581,1.31167681312927,1.32885222563274,1.3460276381362,1.36320305063966],"text":["t: 0.4313638<br />event: 0.006345463","t: 0.4612502<br />event: 0.023520875","t: 0.4911366<br />event: 0.040696288","t: 0.5210231<br />event: 0.057871700","t: 0.5509095<br />event: 0.075047113","t: 0.5807959<br />event: 0.092222525","t: 0.6106823<br />event: 0.109397938","t: 0.6405688<br />event: 0.126573350","t: 0.6704552<br />event: 0.143748763","t: 0.7003416<br />event: 0.160924175","t: 0.7302281<br />event: 0.178099588","t: 0.7601145<br />event: 0.195275000","t: 0.7900009<br />event: 0.212450413","t: 0.8198873<br />event: 0.229625825","t: 0.8497738<br />event: 0.246801238","t: 0.8796602<br />event: 0.263976650","t: 0.9095466<br />event: 0.281152063","t: 0.9394331<br />event: 0.298327475","t: 0.9693195<br />event: 0.315502888","t: 0.9992059<br />event: 0.332678300","t: 1.0290924<br />event: 0.349853713","t: 1.0589788<br />event: 0.367029125","t: 1.0888652<br />event: 0.384204538","t: 1.1187516<br />event: 0.401379950","t: 1.1486381<br />event: 0.418555363","t: 1.1785245<br />event: 0.435730775","t: 1.2084109<br />event: 0.452906188","t: 1.2382974<br />event: 0.470081600","t: 1.2681838<br />event: 0.487257013","t: 1.2980702<br />event: 0.504432425","t: 1.3279566<br />event: 0.521607838","t: 1.3578431<br />event: 0.538783250","t: 1.3877295<br />event: 0.555958663","t: 1.4176159<br />event: 0.573134075","t: 1.4475024<br />event: 0.590309488","t: 1.4773888<br />event: 0.607484900","t: 1.5072752<br />event: 0.624660313","t: 1.5371617<br />event: 0.641835725","t: 1.5670481<br />event: 0.659011138","t: 1.5969345<br />event: 0.676186551","t: 1.6268209<br />event: 0.693361963","t: 1.6567074<br />event: 0.710537376","t: 1.6865938<br />event: 0.727712788","t: 1.7164802<br />event: 0.744888201","t: 1.7463667<br />event: 0.762063613","t: 1.7762531<br />event: 0.779239026","t: 1.8061395<br />event: 0.796414438","t: 1.8360259<br />event: 0.813589851","t: 1.8659124<br />event: 0.830765263","t: 1.8957988<br />event: 0.847940676","t: 1.9256852<br />event: 0.865116088","t: 1.9555717<br />event: 0.882291501","t: 1.9854581<br />event: 0.899466913","t: 2.0153445<br />event: 0.916642326","t: 2.0452310<br />event: 0.933817738","t: 2.0751174<br />event: 0.950993151","t: 2.1050038<br />event: 0.968168563","t: 2.1348902<br />event: 0.985343976","t: 2.1647767<br />event: 1.002519388","t: 2.1946631<br />event: 1.019694801","t: 2.2245495<br />event: 1.036870213","t: 2.2544360<br />event: 1.054045626","t: 2.2843224<br />event: 1.071221038","t: 2.3142088<br />event: 1.088396451","t: 2.3440952<br />event: 1.105571863","t: 2.3739817<br />event: 1.122747276","t: 2.4038681<br />event: 1.139922688","t: 2.4337545<br />event: 1.157098101","t: 2.4636410<br />event: 1.174273513","t: 2.4935274<br />event: 1.191448926","t: 2.5234138<br />event: 1.208624338","t: 2.5533003<br />event: 1.225799751","t: 2.5831867<br />event: 1.242975163","t: 2.6130731<br />event: 1.260150576","t: 2.6429595<br />event: 1.277325988","t: 2.6728460<br />event: 1.294501401","t: 2.7027324<br />event: 1.311676813","t: 2.7326188<br />event: 1.328852226","t: 2.7625053<br />event: 1.346027638","t: 2.7923917<br />event: 1.363203051"],"type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(51,102,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":50,"r":50,"b":60,"l":50,"pad":4},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[0.313312367892024,2.91044308576522],"tickmode":"array","ticktext":["500"],"tickvals":[2.69897000433602],"categoryorder":"array","categoryarray":["500"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"Cumulative Time (t)<br> Fig 1.1: A simple RGA, the log scale used to make a linear relationship between<br> the failure count and time","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[-0.068160152531983,1.43136320317164],"tickmode":"array","ticktext":["5","10","15","20","25"],"tickvals":[0.698970004336019,1,1.17609125905568,1.30102999566398,1.39794000867204],"categoryorder":"array","categoryarray":["5","10","15","20","25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":"Cumulative Failures (N)","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative","annotations":[{"text":"<a href='http://reliawiki.org/index.php/Crow-AMSAA_(NHPP)'>Data Source: Reliasoft Chapter 3.2: Crow-AMSAA (NHPP)<\/a>","x":0.5,"y":0,"xref":"paper","yref":"paper","showarrow":false}]},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[],"cloud":false,"displaylogo":false,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"16fccd446a0":{"x":{},"y":{},"type":"scatter"},"16fc3dea113c":{"x":{},"y":{}}},"cur_data":"16fccd446a0","visdat":{"16fccd446a0":["function (y) ","x"],"16fc3dea113c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":[],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script><div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"data":[{"x":[2.7,10.3,12.5,30.6,57,61.3,80,109.5,125,128.6,143.8,167.9,229.2,296.7,320.6,328.2,366.2,396.7,421.1,438.2,501.2,620],"y":[5.63367544674508,9.44317934028146,10.1754270493526,14.3731528727898,18.2715095044536,18.7914300388781,20.8242080852489,23.5050363543649,24.7367275124028,25.0091769598681,26.1106153820307,27.7190018859127,31.2552100243825,34.5279319651201,35.5754853028466,35.8984969299626,37.4482944468062,38.6220981279465,39.5217987668915,40.1333948784362,42.2680641360239,45.883003910306],"text":["t:   2.7<br />MTBF:  5.633675","t:  10.3<br />MTBF:  9.443179","t:  12.5<br />MTBF: 10.175427","t:  30.6<br />MTBF: 14.373153","t:  57.0<br />MTBF: 18.271510","t:  61.3<br />MTBF: 18.791430","t:  80.0<br />MTBF: 20.824208","t: 109.5<br />MTBF: 23.505036","t: 125.0<br />MTBF: 24.736728","t: 128.6<br />MTBF: 25.009177","t: 143.8<br />MTBF: 26.110615","t: 167.9<br />MTBF: 27.719002","t: 229.2<br />MTBF: 31.255210","t: 296.7<br />MTBF: 34.527932","t: 320.6<br />MTBF: 35.575485","t: 328.2<br />MTBF: 35.898497","t: 366.2<br />MTBF: 37.448294","t: 396.7<br />MTBF: 38.622098","t: 421.1<br />MTBF: 39.521799","t: 438.2<br />MTBF: 40.133395","t: 501.2<br />MTBF: 42.268064","t: 620.0<br />MTBF: 45.883004"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(255,205,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,205,0,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[-28.165,650.865],"tickmode":"array","ticktext":["0","200","400","600"],"tickvals":[0,200,400,600],"categoryorder":"array","categoryarray":["0","200","400","600"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"Cumulative Time (t) <br>Fig 1.2: A plot showing an improvment in the system as the MTBF improve over time","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"type":"linear","autorange":false,"range":[3.62120902356703,47.895470333484],"tickmode":"array","ticktext":["10","20","30","40"],"tickvals":[10,20,30,40],"categoryorder":"array","categoryarray":["10","20","30","40"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":"MTBF","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative","annotations":[{"text":"<a href='http://reliawiki.org/index.php/Crow-AMSAA_(NHPP)'>Data Source: Reliasoft Chapter 3.2: Crow-AMSAA (NHPP)<\/a>","x":0.5,"y":0,"xref":"paper","yref":"paper","showarrow":false}]},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[],"cloud":false,"displaylogo":false,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"16fc1eec77e":{"x":{},"y":{},"type":"scatter"},"16fc6a5d68c0":{"x":{},"y":{}}},"cur_data":"16fc1eec77e","visdat":{"16fc1eec77e":["function (y) ","x"],"16fc6a5d68c0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1}},"base_url":"https://plot.ly"},"evals":[],"jsHooks":{"render":[{"code":"function(el, x) { var ctConfig = crosstalk.var('plotlyCrosstalkOpts').set({\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.2,\"selected\":{\"opacity\":1}}); }","data":null}]}}</script></p>
+<ul>
+<li>Parameter <span class="math inline">\(\beta\)</span> which can be interpreted as follow:-
+<ul>
+<li><span class="math inline">\(\beta &gt; 1\)</span>: The system reliability is decreasing.</li>
+<li><span class="math inline">\(\beta &lt; 1\)</span>: The system reliability is increasing.</li>
+<li><span class="math inline">\(\beta = 1\)</span>: The system reliability is remain constant.</li>
+</ul></li>
+</ul>
+<p>in the previous plot the <span class="math inline">\(\beta = 0.6142\)</span></p>
+</div>
+<div id="how-it-differs-from-other-reliability-metrics" class="section level2">
+<h2>How it differs from other reliability metrics ?</h2>
+<div id="mtbf" class="section level3">
+<h3>MTBF</h3>
+<p>The Mean Time Between Failure (MTBF) is a well known reliability metric, It’s widely used despite the fact of lacking the ability to assess the change in the reliability, this is one of many issues faced while using the MTBF.</p>
+<p>For further information about the MTBF issues <a href="https://www.linkedin.com/pulse/real-reliability-stop-abusing-ammar-alkhaldi-cbbss-/">check this article.</a></p>
+</div>
+<div id="weibull" class="section level3">
+<h3>Weibull</h3>
+<p>Weibull analysis is a parametric analysis that give two parameters <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\eta\)</span> so called shape (slope) and scale (characteristic life) respectively . The weibull analysis is a powerful reliability distribution used to model degradation process (e.g. fatigue, corrosion, abrasion, etc). and since it’s used to model failure mode this imply it’s weakness of modelling mixed failure modes not to mention a whole equipment or a system.</p>
+</div>
+</div>
+<div id="when-to-use-it" class="section level2">
+<h2>when to use it ?</h2>
+<p>This bring us to the usage of the RGA, which is used to assess a whole equipment or system. RGA is originally used to test the product reliability under design, after testing the first prototype the tester will check if the reliability meeting the requirement (using destructive testing or simulation) if not a modification will be done to improve the reliability and the test will take place again and the RGA is used to measure the improvement over time and to interpolate the future improvement (when and how many iteration to meet the target) this usually done in Accelerated Life Testing Analysis (ALTA) following the “IEC 61014 programmes for reliability growth”. This doesn’t mean that the RGA can’t be used in the utilization phase. The analogy with a running plant is the changes in the system, like MOCs and introduction of RCM program, which should be a point of time dividing the system life to before and after improvement.</p>
+</div>
+<div id="different-flavors" class="section level2">
+<h2>Different flavors</h2>
+<p>RGA is a slightly different mathematical way:-</p>
+<ul>
+<li><p>Duane</p></li>
+<li><p>Crow-AMSAA</p></li>
+<li><p>IEC 61164</p></li>
+</ul>
+</div>
+</div>
+<div id="rga-for-a-multiple-systems" class="section level1">
+<h1>RGA for a multiple systems</h1>
+<p>Performing RGA for all the RCM systems can be a logical step to evaluate how is our RCM effecting the failure rate and can tell in numbers if the RCM efforts sucessed or not. we can use a simple equation like the one below as a start. <span class="math display">\[Reliability\; Growth\;  Improved\; for\; completed\; RCM\; systems \over Total\; No\; of\; completed\; RCM\; systems\]</span> So the KPI require you to:-</p>
+<ol style="list-style-type: decimal">
+<li>Perform RGA for all the RGA system</li>
+<li>Check how many of these RGAs returned <span class="math inline">\(\beta &lt; 1\)</span></li>
+<li>Divide the sum of RGAs with <span class="math inline">\(\beta &lt; 1\)</span> over the total number of RCM systems. So for a company with 150 RCM systems you need to perform 150 RGAs. which sound silly and hideous, but don’t worry there are a workaround.</li>
+</ol>
+<div id="the-challanage-of-multible-systems" class="section level2">
+<h2>The challanage of multible systems</h2>
+<p>While analyzing the reliability of a single system sound to be a tough task (if we do it in the right way) analyzing more than 100 systems sound to be crazy. but in the age of data science and big data this seem to be a perfect opportunity for <a href="https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/disruptive-technologies">automation of knoweldge work</a> and use of dormant data. before we proceed you need to know in advance that you must have a programming background or the ability to learn how to program a simple code. if you are sensitive to “learning new things” then you should not proceed.</p>
+<div id="step-1-create-a-query" class="section level3">
+<h3>Step 1: Create a query</h3>
+<p>I’ll assume you are using some kind of CMMS system (SAP in my case) where all of the failure records exists, now you might be lucky enough to have an SQL interface (Meridum in my case) or you are familiar with the system to be able to get a table looking like the one below.</p>
+<table>
+<thead>
+<tr class="header">
+<th>RCM system</th>
+<th>Equipment name</th>
+<th>Installation date</th>
+<th>Failure date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>System 1</td>
+<td>Pump 7777</td>
+<td>2003/01/01</td>
+<td>2004/05/04</td>
+</tr>
+<tr class="even">
+<td>System 2</td>
+<td>Valve 7777</td>
+<td>2005/01/01</td>
+<td>2007/01/21</td>
+</tr>
+<tr class="odd">
+<td>System 3</td>
+<td>Vessel 7777</td>
+<td>2006/09/05</td>
+<td>2009/11/01</td>
+</tr>
+</tbody>
+</table>
+<p>If you are using meridum you use the code below.</p>
+</div>
+<div id="step-2-clean-your-data" class="section level3">
+<h3>Step 2: Clean your data</h3>
+<p>I’ll suggest to clean your data programmatically and avoid manually cleaning since this can take ages, minimize the manual cleaning as much as you can. this can be done in your SQL code:-</p>
+<ul>
+<li><p>Check the activity: you may want to limit your data to (repair and replace) something like calibration or cleaning doesn’t sound as failure of function.</p></li>
+<li><p>Adding PM01 notifications: Some of the PM01 are valid failure of function you might want to add these after the limiting the activity in the point before, this is depending on hoe your people treating their CMMS in some cases you might end up with 0 PM02(break down) and that not because you have reliable assets!</p></li>
+<li><p>Filter the repairable parts: When there is no parts listed in the parts field it can be wise to remove this entry, anyhow this again depend on how the people using the system, is it usual to have empty field ? or that mean to replacement done ?</p></li>
+<li><p>Text mining: based on the patterns you see in work orders you can set some filtration rules on the work order text(e.g. “paint”, “painting”,“lighting”,“cleaning” when people used to raise notification on equipment instead of functional location). this is the biggest of field of improvement for the data quality. <strong>If you wait for the data to be clean by itself then be ready to take blind decisions</strong></p></li>
+</ul>
+</div>
+<div id="step-3-export-the-result" class="section level3">
+<h3>Step 3: Export the result</h3>
+<p>After you have established a query that clean your data now you can export your data to spread sheet. in future you should start from this point when you want to update your result unless you wanted to adjust your filtration. ### Step 4: Create your RGA code In my case im using R code, the could is simple enogh for the begineer to understand. My excel sheet name is “example” and i want to end up with 2 columns “Event#” and “t” for cumulative time.</p>
+<ol style="list-style-type: decimal">
+<li>order your data based on the event date.</li>
+<li>t = event date - installation date</li>
+</ol>
+<p>that was very simple.</p>
+</div>
+<div id="step-5-test-your-code" class="section level3">
+<h3>Step 5: Test your code</h3>
+<p>Having your code now you can test result, i sugest to go the link in the fig 1.1 and check one of the example and see if your data matching the result. herewith a starter code for that.</p>
+<pre class="r"><code>example$`log(t)` &lt;- log(example$t)
+B_hat &lt;- length(example$t)/(length(example$t) * (max(example$`log(t)`)) - (sum(example$`log(t)`)))
+L_hat &lt;- length(example$t)/(max(example$t)^B_hat)
+L_hat_inst &lt;- L_hat * B_hat * ((max(example$t))^(B_hat - 1))
+example$L_hat_inst &lt;- L_hat * B_hat * (example$t)^(B_hat - 1)
+example$MTBF &lt;- 1/example$L_hat_inst</code></pre>
+</div>
+<div id="step-6-make-your-code-massive" class="section level3">
+<h3>Step 6: Make your code massive</h3>
+<p>Now we’ll use what called “functional programming” will insert a function inside another function. the first function is “sapply” what want to do is to take list with multiple nodes each node represent a table and every table represent a single RCM system. The second function is your RGA function…so you got the picture…yes we’ll apply the RGA function on all the RCM system in this and that all folks.</p>
+</div>
+</div>
+</div>
+<div id="wrap-up" class="section level1">
+<h1>Wrap up</h1>
+<p>While this sound a lot of headache at the first glance it still a very effective and highly customizable way to do your day to day activities. Probably you will feel demoralized when your code don’t work -which will happen in the first time- but it’s a skill that can be easily adapted and used on different cases. the code eventually will be less than 20 lines, an average coder can do it in one hour. and if you have a doupt you can reach me for sure.</p>
+</div>

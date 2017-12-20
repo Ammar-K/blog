@@ -16,21 +16,19 @@ weight = 5
   ]
 
 # List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
+
 
 [[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
+  course = "Certifed Reliability Leader (CRL)"
 
 [[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
- 
+  course = "Certifed Black Belt Lean Six Sigma"
+
+
+[[education.courses]]
+  course = "Functional Safety Engineer"
+  institution = "TUV Rheinland"
+
 +++
 
 # Biography

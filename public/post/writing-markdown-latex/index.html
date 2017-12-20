@@ -29,7 +29,7 @@
     
     
       
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
       
     
   
@@ -47,6 +47,19 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-111470283-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="neo-Reliability">
@@ -61,8 +74,8 @@
 
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="twitter:site" content="@GeorgeCushen">
-  <meta property="twitter:creator" content="@GeorgeCushen">
+  <meta property="twitter:site" content="@Ammar_Alkhaldi">
+  <meta property="twitter:creator" content="@Ammar_Alkhaldi">
   
   <meta property="og:site_name" content="neo-Reliability">
   <meta property="og:url" content="/post/writing-markdown-latex/">
@@ -80,7 +93,7 @@
   <title>Writing content with Markdown, LaTeX, and Shortcodes | neo-Reliability</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" class="dark">
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
   <div class="container">
@@ -212,6 +225,9 @@
   
 
   
+  
+  <span class="middot-divider"></span>
+  <a href="/post/writing-markdown-latex/#disqus_thread"></a>
   
 
   
@@ -691,6 +707,29 @@ Here's some important information...
 
 <div class="article-container">
   
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "neo-relliability" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
 
 </div>
 
@@ -743,6 +782,8 @@ Here's some important information...
     
 
     
+    
+    <script id="dsq-count-scr" src="//neo-relliability.disqus.com/count.js" async></script>
     
 
     

@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/reliability-growth/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -41,15 +50,6 @@
     
     <url>
     
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/project/deep-learning/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
@@ -61,51 +61,6 @@
     
       <loc>/project/example-external-project/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/getting-started/</loc>
-      <lastmod>2017-09-03T00:00:00+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/widgets/</loc>
-      <lastmod>2016-04-19T00:00:00+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/managing-content/</loc>
-      <lastmod>2016-04-18T00:00:00+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-17T00:00:00+03:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/faq/</loc>
-      <lastmod>2016-04-10T00:00:00+03:00</lastmod>
     </url>
     
   
@@ -180,8 +135,8 @@
     
     <url>
     
-      <loc>/tags/hugo/</loc>
-      <lastmod>2017-09-03T00:00:00+03:00</lastmod>
+      <loc>/post/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -202,6 +157,46 @@
     
       <loc>/publication_types/</loc>
       <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/rga/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/reliability/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/reliability/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
