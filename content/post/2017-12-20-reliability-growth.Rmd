@@ -11,8 +11,8 @@ tags:
   - Reliability
 ---
 
-<img src="~/R/blog/static/img/RGAheader.jpg">
 
+![](header.jpg)
 
 
 ```{r knitr_init, echo=FALSE, cache=FALSE, warning=FALSE,error=FALSE,include=FALSE}
