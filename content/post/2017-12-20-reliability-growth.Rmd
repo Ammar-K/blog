@@ -19,7 +19,7 @@ tags:
 library(knitr)
 ## Global options
 opts_chunk$set(echo=FALSE,
-	             cache=FALSE,
+                 cache=FALSE,
                prompt=FALSE,
                tidy=TRUE,
                comment=NA,
@@ -32,7 +32,7 @@ library(plotly)
 
 
 
-# What is the Reliability Growth ?
+# What is the Reliability Growth?
 
 
 ## Background
@@ -42,7 +42,7 @@ The output of the analysis is given as:-
 
 * Trend showing the reliability change in terms of time(cycle, Km, ) on the X-axis and failure rate (or MTBF since it's the inverse of failure rate) on the Y-axis.
 
-```{r}
+```{r,include=TRUE}
 example <- read_excel("~/R/blog/static/files/reliasoft_example.xlsx")
 colnames(example)[2] <- "t"
 example$`log(t)` <- log(example$t)
@@ -94,21 +94,21 @@ config(ggplotly(a), displaylogo = FALSE,collaborate= FALSE, modeBarButtonsToRemo
 in the previous plot the $\beta = 0.6142$ 
   
 
-## How it differs from other reliability metrics ?
+## How it differs from other reliability metrics?
 
 ### MTBF
-The Mean Time Between Failure (MTBF) is a well known reliability metric, It's widely used despite the fact of lacking the ability to assess the change in the reliability, this is one of many issues faced while using the MTBF.
+The Mean Time Between Failure (MTBF) is a well-known reliability metric, It's widely used despite the fact of lacking the ability to assess the change in the reliability, this is one of many issues faced while using the MTBF.
 
 For further information about the MTBF issues [check this article.](https://www.linkedin.com/pulse/real-reliability-stop-abusing-ammar-alkhaldi-cbbss-/)
 
 ### Weibull
-Weibull analysis is a parametric analysis that give two parameters $\beta$ and $\eta$ so called shape (slope) and scale (characteristic life) respectively .
-The weibull analysis is a powerful reliability distribution used to model degradation process (e.g. fatigue, corrosion, abrasion, etc). and since it's used to model failure mode this imply it's weakness of modelling mixed failure modes not to mention a whole equipment or a system.
+Weibull analysis is a parametric analysis that gives two parameters $\beta$ and $\eta$ so-called shape (slope) and scale (characteristic life) respectively.
+The Weibull analysis is a powerful reliability distribution used to model degradation process (e.g. fatigue, corrosion, abrasion, etc). and since it's used to model failure mode this imply it's weakness of modeling mixed failure modes not to mention a whole equipment or a system.
 
 
-## when to use it ?
-This bring us to the usage of the RGA, which is used to assess a whole equipment or system.
-RGA is originally used to test the product reliability under design, after testing the first prototype the tester will check if the reliability meeting the requirement (using destructive testing or simulation) if not a modification will be done to improve the reliability and the test will take place again and the RGA is used to measure the improvement over time and to interpolate the future improvement (when and how many iteration to meet the target) this usually done in Accelerated Life Testing Analysis (ALTA) following the "IEC 61014 programmes for reliability growth".
+## when to use it?
+This brings us to the usage of the RGA, which is used to assess a whole equipment or system.
+RGA is originally used to test the product reliability under design, after testing the first prototype the tester will check if the reliability meeting the requirement (using destructive testing or simulation) if not a modification will be done to improve the reliability and the test will take place again and the RGA is used to measure the improvement over time and to interpolate the future improvement (when and how many iterations to meet the target) this usually done in Accelerated Life Testing Analysis (ALTA) following the "IEC 61014 programmes for reliability growth".
 This doesn't mean that the RGA can't be used in the utilization phase.
 The analogy with a running plant is the changes in the system, like MOCs and introduction of RCM program, which should be a point of time dividing the system life to before and after improvement.
 
@@ -122,9 +122,9 @@ RGA is a slightly different mathematical way:-
 
 * IEC 61164
 
-# RGA for a multiple systems
+# RGA for multiple systems
 
-Performing RGA for all the RCM systems can be a logical step to evaluate how is our RCM effecting the failure rate and can tell in numbers if the RCM efforts sucessed or not.
+Performing RGA for all the RCM systems can be a logical step to evaluate how is our RCM effecting the failure rate and can tell in numbers if the RCM efforts succeed or not.
 we can use a simple equation like the one below as a start.
 $$Reliability\; Growth\;  Improved\; for\; completed\; RCM\; systems \over Total\; No\; of\; completed\; RCM\; systems$$ 
 So the KPI require you to:- 
@@ -132,15 +132,15 @@ So the KPI require you to:-
 1. Perform RGA for all the RGA system
 2. Check how many of these RGAs returned $\beta < 1$
 3. Divide the sum of RGAs with $\beta < 1$ over the total number of RCM systems.
-So for a company with 150 RCM systems you need to perform 150 RGAs. which sound silly and hideous, but don't worry there are a workaround.
+So for a company with 150 RCM systems you need to perform 150 RGAs. which sound silly and hideous, but don't worry there is a workaround.
 
-## The challanage of multible systems 
+## The challenge of multiple systems 
 
-While analyzing the reliability of a single system sound to be a tough task (if we do it in the right way) analyzing more than 100 systems sound to be crazy. but in the age of data science and big data this seem to be a perfect opportunity for [automation of knoweldge work](https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/disruptive-technologies) and use of dormant data.
+While analyzing the reliability of a single system sound to be a tough task (if we do it in the right way) analyzing more than 100 systems sound to be crazy. but in the age of data science and big data, this seems to be a perfect opportunity for [automation of knowledge work](https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/disruptive-technologies) and use of dormant data.
 before we proceed you need to know in advance that you must have a programming background or the ability to learn how to program a simple code. if you are sensitive to "learning new things" then you should not proceed. 
 
 ### Step 1: Create a query
-I'll assume you are using some kind of CMMS system (SAP in my case) where all of the failure records exists, now you might be lucky enough to have an SQL interface (Meridum in my case) or you are familiar with the system to be able to get a table looking like the one below.
+I'll assume you are using some kind of CMMS system (SAP in my case) where all of the failure records exist, now you might be lucky enough to have an SQL interface or you are familiar with the system to be able to get a table looking like the one below.
 
 | RCM system | Equipment name | Installation date | Failure date |
 |------------|----------------|-------------------|--------------|
@@ -148,28 +148,27 @@ I'll assume you are using some kind of CMMS system (SAP in my case) where all of
 | System 2   | Valve 7777     | 2005/01/01        | 2007/01/21   |
 | System 3   | Vessel 7777    | 2006/09/05        | 2009/11/01   |
 
-If you are using meridum you use the code below.
-
 
 ### Step 2: Clean your data 
 I'll suggest to clean your data programmatically and avoid manually cleaning since this can take ages, minimize the manual cleaning as much as you can.
 this can be done in your SQL code:-
 
-* Check the activity: you may want to limit your data to (repair and replace) something like calibration or cleaning doesn't sound as failure of function.
+* Check the activity: you may want to limit your data to (repair and replace) something like calibration or cleaning doesn't sound like a failure of the function.
 
-* Adding PM01 notifications: Some of the PM01 are valid failure of function you might want to add these after the limiting the activity in the point before, this is depending on hoe your people treating their CMMS in some cases you might end up with 0 PM02(break down) and that not because you have reliable assets!
+* Adding PM01 notifications: Some of the PM01 are valid failure of function you might want to add these after the limiting the activity in the point before, this is depending on how your people treating their CMMS in some cases you might end up with 0 PM02(break down) and that not because you have reliable assets!
 
-* Filter the repairable parts: When there is no parts listed in the parts field it can be wise to remove this entry, anyhow this again depend on how the people using the system, is it usual to have empty field ? or that mean to replacement done ?
+* Filter the repairable parts: When there are no parts listed in the parts field it can be wise to remove this entry, anyhow this again depending on how the people using the system, is it usual to have the empty field ? or that mean to replacement is done?
 
-* Text mining: based on the patterns you see in work orders you can set some filtration rules on the work order text(e.g. "paint", "painting","lighting","cleaning" when people used to raise notification on equipment instead of functional location). this is the biggest of field of improvement for the data quality.
+* Text mining: based on the patterns you see in work orders you can set some filtration rules on the work order text(e.g. "paint", "painting","lighting","cleaning" when people used to raise notification on equipment instead of functional location). this is the biggest of the field of improvement for the data quality.
 **If you wait for the data to be clean by itself then be ready to take blind decisions**
 
 
 ### Step 3: Export the result
-After you have established a query that clean your data now you can export your data to spread sheet. in future you should start from this point when you want to update your result unless you wanted to adjust your filtration.
+After you have established a query that clean your data now you can export your data to a spreadsheet. in future, you should start from this point when you want to update your result unless you wanted to adjust your filtration.
+
 ### Step 4: Create your RGA code
-In my case im using R code, the could is simple enogh for the begineer to understand.
-My excel sheet name is "example" and i want to end up with 2 columns "Event#" and "t" for cumulative time.
+In my case I'm using R code, the could is simple enough for the beginner to understand.
+My excel sheet name is "example" and I want to end up with 2 columns "Event#" and "t" for cumulative time.
 
 1. order your data based on the event date.
 2. t = event date - installation date
@@ -178,7 +177,7 @@ that was very simple.
  
 
 ### Step 5: Test your code
-Having your code now you can test result, i sugest to go the link in the fig 1.1 and check one of the example and see if your data matching the result. herewith a starter code for that.
+Having your code now you can test result, I suggest to go the link in fig 1.1 and check one of the examples and see if your data matching the result. herewith a starter code for that.
 
 ```{r,echo=TRUE,eval=FALSE}
 example$`log(t)` <- log(example$t)
@@ -192,17 +191,13 @@ example$MTBF <- 1/example$L_hat_inst
 
 ### Step 6: Make your code massive
 Now we'll use what called "functional programming" will insert a function inside another function.
-the first function is "sapply" what want to do is to take list with multiple nodes each node represent a table and every table represent a single RCM system. 
+the first function is "sapply" what want to do is to take the list with multiple nodes each node represents a table and every table represent a single RCM system. 
 The second function is your RGA function...so you got the picture...yes we'll apply the RGA function on all the RCM system in this and that all folks. 
 
 # Wrap up
 
-While this sound a lot of headache at the first glance it still a very effective and highly customizable way to do your day to day activities. 
-Probably you will feel demoralized when your code don't work -which will happen in the first time- but it's a skill that can be easily adapted and used on different cases. 
+While this sounds a lot of headache at the first glance it still a very effective and highly customizable way to do your day to day activities. 
+Probably you will feel demoralized when your code doesn't work -which will happen for the first time- but it's a skill that can be easily adapted and used in different cases. 
 the code eventually will be less than 20 lines, an average coder can do it in one hour.
-and if you have a doupt you can reach me for sure.
-
-
-
-
+and if you have a doubt you can reach me for sure.
 
