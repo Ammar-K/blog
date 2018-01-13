@@ -11,5 +11,40 @@ tags:
   - bad actors
 ---
 
+```{r knitr_init, echo=FALSE, cache=FALSE, warning=FALSE,error=FALSE,include=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=FALSE,
+                 cache=FALSE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+```
+
+# Introduction
+
+One day you waked up and decided to solve all the issue in your plants -which is a good thing to do in the morring- you opened the production system and sort out all the big issues, you found out that there are many of these issues, so the next logical step is to select the biggest one of these many issues. One of the ways to do that is pareto chart, where we want to find the 20% of the causes that create the 80 of the effect -losses in our case- i'll that there is better ways to find and visualize the bad actors, but first let's try the pareto chart. 
+
+# The Data
+our data looks like this 
+
+```{r}
+library(readxl)
+library(lubridate)
+production <- read_excel("~/R/blog/static/production.xlsx")
+
+```
+
+
+```{r}
+library(DT)
+library(widgetframe)
+dt <- datatable(production)
+frameableWidget(dt)
+```
+
+
 
 
