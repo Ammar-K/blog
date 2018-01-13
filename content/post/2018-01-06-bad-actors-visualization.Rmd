@@ -42,7 +42,7 @@ production <- read_excel("~/R/blog/static/production.xlsx")
 library(DT)
 library(widgetframe)
 dt <- datatable(production)
-frameableWidget(dt)
+frameableWidget(dt,height = 350, width = '95%')
 ```
 
 
