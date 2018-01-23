@@ -164,8 +164,8 @@ After we have identified the Bad Actors, it's time to take action, now we'll go 
 For more about the RCA:- 
 
 
-- [Reliability Movies](https://www.reliability.com/reliability-movies/)
-- [Reliability Articles](https://www.reliability.com/articles/)
+- [RCA Movies](https://www.reliability.com/reliability-movies/)
+- [RCA Articles](https://www.reliability.com/articles/)
 - [HSE, Root causes analysis:Literature review](http://www.hse.gov.uk/research/crr_pdf/2001/crr01325.pdf)
 - [Six Sigma, Root Cause Analysis Examples](https://www.youtube.com/watch?v=IX3uQ72-iXs)
 
@@ -176,7 +176,7 @@ The additional reading focus on the practice of identifying the "Top issues":-
 - [Chronic failure article](https://www.reliability.com/pdf/article-chemeng.pdf?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BYpHh7KF%2FSsqTGMe3xEP%2B4w%3D%3D)
 - [Chronic failure video](https://www.youtube.com/watch?v=CQR447EVTh8&lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BYpHh7KF%2FSsqTGMe3xEP%2B4w%3D%3D)
 
-*Note: I'm not affiliated with the references, links given based on my experience as end-user.*
+*Note: I'm not affiliated with linked organizations, references made based on my experience as end-user.*
 
 
 
