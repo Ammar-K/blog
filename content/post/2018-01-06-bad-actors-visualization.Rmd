@@ -34,7 +34,7 @@ Our data contains 129 observations (incidents) the first 15 rows looks like this
 library(readxl)
 library(lubridate)
 library(ggplot2)
-library(plotly)
+library(dplyr)
 production <- read_excel("~/R/blog/static/production.xlsx")
 production$Cost <- round(production$Cost)
 production$`Lost Production` <- round(production$`Lost Production`)
@@ -67,7 +67,6 @@ you may have different taxonomy and different level of details where you work bu
 The first question comes to the mind when we want to do Pareto chart is "group by what ?". In our case, we have 8 columns, 6 causes and 2 effects(i.e. cost and lost production). so we'll group by which cause and which effect? which of these effects is more important? I think the answer is very clear for this one.bottom line it's the cost $. But what about the causes? the "Incident ID" is very small, "Plant" might be very big, the choice of the right level of "data granularity" might be choose based on the frequency of the report, so we might found large granular suitable for yearly report and fine granular more suitable for weekly or monthly reports, **however in the second approach of visualizing the bad actors we don't need to worry about this issue**, we'll see that shortly. Now and for this Pareto example I'll group by "Type".
 
 ```{r pareto}
-library(ggplot2)
 pareto <- production %>% group_by(Type) %>% summarise(Cost = sum(Cost))
 pareto <- pareto[order(-pareto$Cost),]
 pareto$cum <- cumsum(pareto$Cost)
@@ -110,7 +109,6 @@ First, we need to make our data in the following format.
 We can eaisly format our data in this way using the code provided at "[The code](#the-code)" section
 
 ```{r}
-library(dplyr)
 production$Asset<- gsub("-","",production$Asset)
 production$con <- paste(production$Plant,production$Category,production$Type,production$Asset,sep = "-")
 keep <- c("Cost", "con")
