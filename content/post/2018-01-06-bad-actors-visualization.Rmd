@@ -11,6 +11,8 @@ tags:
   - bad actors
 ---
 
+![](badactor.jpg)
+
 ```{r knitr_init, echo=FALSE, cache=FALSE, warning=FALSE,error=FALSE,include=FALSE}
 library(knitr)
 ## Global options

@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2018 Ammar Al-Khaldi</copyright>
-    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bad Actors Visualization</title>
       <link>/post/bad-actors-visualization/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/bad-actors-visualization/</guid>
       <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
@@ -22,9 +22,13 @@
 &lt;script src=&#34;/rmarkdown-libs/d3/d3.min.js&#34;&gt;&lt;/script&gt;
 
 
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;badactor.jpg&#34; /&gt;
+
+&lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;One day you waked up and decided to solve all the issue in your plants -which is a good thing to do in the morning- you opened the production system and sort out all the big issues, you found out that there are many of these issues, so the next logical step is to select the biggest one of these many issues. One of the ways to do that is a pareto chart, where we want to find the 20% of the causes that create the 80 of the effect -losses in our case- I’ll claim that there are better ways to find and visualize the bad actors, but first let’s try the Pareto chart.&lt;/p&gt;
+&lt;p&gt;One day you waked up and decided to solve all the issue in your plants -which is a good thing to do in the morning- you opened the production system and sort out all the big issues, you found out that there are many of these issues, so the next logical step is to select the biggest one of these many issues. One of the ways to do that is a Pareto chart, where we want to find the 20% of the causes that create the 80 of the effect -losses in our case- I’ll claim that there are better ways to find and visualize the bad actors, but first let’s try the Pareto chart.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-data&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;The Data&lt;/h1&gt;
@@ -286,13 +290,20 @@ sunburst(production2, count = T)&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;Path forward&lt;/h1&gt;
 &lt;p&gt;After we have identified the Bad Actors, it’s time to take action, now we’ll go from problem identification to problem-solving. The Root Cause Analysis (RCA) is an excellent tool to address high-level problems like the bad actors. For more about the RCA:-&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reliability.com/reliability-movies/&#34;&gt;Reliability Movies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reliability.com/articles/&#34;&gt;Reliability Articles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reliability.com/reliability-movies/&#34;&gt;RCA Movies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reliability.com/articles/&#34;&gt;RCA Articles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hse.gov.uk/research/crr_pdf/2001/crr01325.pdf&#34;&gt;HSE, Root causes analysis:Literature review&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IX3uQ72-iXs&#34;&gt;Six Sigma, Root Cause Analysis Examples&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;additional-reading&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Additional Reading&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;Note: I’m not affiliated with www.reliability.com reference given based on my experience as end-user.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The additional reading focus on the practice of identifying the “Top issues”:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reliability.com/pdf/article-chemeng.pdf?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BYpHh7KF%2FSsqTGMe3xEP%2B4w%3D%3D&#34;&gt;Chronic failure article&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=CQR447EVTh8&amp;amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3BYpHh7KF%2FSsqTGMe3xEP%2B4w%3D%3D&#34;&gt;Chronic failure video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: I’m not affiliated with linked organizations, references made based on my experience as end-user.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
