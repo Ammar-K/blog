@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RGA on neo-Reliability</title>
+    <link>/tags/rga/</link>
+    <description>Recent content in RGA on neo-Reliability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017-2018 Ammar Al-Khaldi</copyright>
+    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rga/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reliability Growth</title>
+      <link>/post/reliability-growth/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/reliability-growth/</guid>
+      <description>What is the Reliability Growth?BackgroundThe Reliability Growth Analysis (RGA) is an analytical tool used to assess the change in the reliability of equipment, system or a plant. The output of the analysis is given as:-
+Trend showing the reliability change in terms of time(cycle, Km, ) on the X-axis and failure rate (or MTBF since it’s the inverse of failure rate) on the Y-axis.</description>
+    </item>
+    
+  </channel>
+</rss>

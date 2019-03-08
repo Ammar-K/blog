@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on neo-Reliability</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on neo-Reliability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017-2018 Ammar Al-Khaldi</copyright>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bad Actors Visualization</title>
+      <link>/post/bad-actors-visualization/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bad-actors-visualization/</guid>
+      <description>IntroductionOne day you waked up and decided to solve all the issue in your plants -which is a good thing to do in the morning- you opened the production system and sort out all the big issues, you found out that there are many of these issues, so the next logical step is to select the biggest one of these many issues. One of the ways to do that is a Pareto chart, where we want to find the 20% of the causes that create the 80 of the effect -losses in our case- I’ll claim that there are better ways to find and visualize the bad actors, but first let’s try the Pareto chart.</description>
+    </item>
+    
+    <item>
+      <title>Reliability Growth</title>
+      <link>/post/reliability-growth/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/reliability-growth/</guid>
+      <description>What is the Reliability Growth?BackgroundThe Reliability Growth Analysis (RGA) is an analytical tool used to assess the change in the reliability of equipment, system or a plant. The output of the analysis is given as:-
+Trend showing the reliability change in terms of time(cycle, Km, ) on the X-axis and failure rate (or MTBF since it’s the inverse of failure rate) on the Y-axis.</description>
+    </item>
+    
+  </channel>
+</rss>
