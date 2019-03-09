@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engineerig on neo-Reliability</title>
+    <link>/categories/engineerig/</link>
+    <description>Recent content in Engineerig on neo-Reliability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017-2018 Ammar Al-Khaldi</copyright>
+    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/engineerig/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>لماذا عليك</title>
+      <link>/post/2018-01-25-/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-01-25-/</guid>
+      <description>عندما تبدأ المشروع</description>
+    </item>
+    
+  </channel>
+</rss>

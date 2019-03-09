@@ -25,7 +25,7 @@ library(dplyr)
 
 # Load the data
 
-risk <- read.csv("~/interactive_risk_matrix/risk.csv")
+risk <- read.csv("~/risk.csv")
 
 # Creating heatmap background for Risk Matrix
 

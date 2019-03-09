@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Risk on neo-Reliability</title>
+    <link>/tags/risk/</link>
+    <description>Recent content in Risk on neo-Reliability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017-2018 Ammar Al-Khaldi</copyright>
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/risk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building an Interactive Risk Matrix using R</title>
+      <link>/post/building-an-interactive-risk-matrix-using-r/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/building-an-interactive-risk-matrix-using-r/</guid>
+      <description># Load librarieslibrary(ggplot2)library(plotly)library(dplyr)# Load the datarisk &amp;lt;- read.csv(&amp;quot;~/risk.csv&amp;quot;)# Creating heatmap background for Risk Matrix# setting the score in order to calculate the risk levelLikelihood_score &amp;lt;- rep(c(1,2,4,6,12),5)Consequence_score &amp;lt;- rep(c(1,2,4,6,12),each=5)Likelihood &amp;lt;- rep(c(1:5),5)Consequence &amp;lt;- rep(c(1:5),each=5)df &amp;lt;- data.frame(Likelihood,Consequence)df &amp;lt;- mutate(df, risk_score = Consequence_score * Likelihood_score,Risk = case_when(risk_score &amp;gt;= 0 &amp;amp; risk_score &amp;lt; 6 ~ 1,risk_score &amp;gt;= 6 &amp;amp; risk_score &amp;lt; 12 ~ 2,risk_score &amp;gt;= 12 &amp;amp; risk_score &amp;lt; 32 ~ 3,risk_score &amp;gt;= 32 ~ 4) )# plotting risk_p&amp;lt;- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+geom_tile()+scale_fill_gradientn(colours = c(&amp;quot;red&amp;quot;, &amp;quot;orange&amp;quot;,&amp;quot;#EEEE00&amp;quot;,&amp;quot;#008000&amp;quot;),guide=FALSE)+scale_x_continuous(trans = &amp;quot;reverse&amp;quot;,name= &amp;quot;Frequency&amp;quot;,breaks = 0:5, expand = c(0, 0))+scale_y_continuous(trans = &amp;quot;reverse&amp;quot;,name = &amp;quot;Consequence&amp;quot;,breaks = 0:5, expand = c(0, 0))+coord_fixed()+theme_bw()+geom_hline(yintercept = seq(1.</description>
+    </item>
+    
+  </channel>
+</rss>

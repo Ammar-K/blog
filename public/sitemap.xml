@@ -5,8 +5,8 @@
     
     <url>
     
-      <loc>/post/2018-01-25-/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+      <loc>/post/building-an-interactive-risk-matrix-using-r/</loc>
+      <lastmod>2019-03-08T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -124,22 +124,8 @@
     
     <url>
     
-<<<<<<< HEAD
-      <loc>/categories/arabic/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/bad-actors/</loc>
       <lastmod>2018-01-23T00:00:00+00:00</lastmod>
-=======
-      <loc>/categories/</loc>
->>>>>>> 7a0d663806a19f89153f8bf1e64eb1a4d4ccd8cb
       <priority>0</priority>
     </url>
     
@@ -148,13 +134,37 @@
     
     <url>
     
-<<<<<<< HEAD
       <loc>/categories/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-=======
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/deep-learning/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/demo/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
->>>>>>> 7a0d663806a19f89153f8bf1e64eb1a4d4ccd8cb
+      <lastmod>2019-03-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -183,23 +193,8 @@
     
     <url>
     
-<<<<<<< HEAD
-      <loc>/categories/engineerig/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-=======
       <loc>/tags/r/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
->>>>>>> 7a0d663806a19f89153f8bf1e64eb1a4d4ccd8cb
+      <lastmod>2019-03-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -228,13 +223,18 @@
     
     <url>
     
-<<<<<<< HEAD
-      <loc>/tags/r/</loc>
-      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-=======
       <loc>/categories/reliability/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
->>>>>>> 7a0d663806a19f89153f8bf1e64eb1a4d4ccd8cb
+      <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/risk/</loc>
+      <lastmod>2019-03-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -245,36 +245,6 @@
     
       <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/bad-actors/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

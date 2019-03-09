@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.48" />
   <meta name="author" content="Ammar Alkhaldi">
   <meta name="description" content="Reliability Engineer">
 
@@ -87,7 +87,7 @@
   <meta property="og:description" content="Reliability Engineer">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2018-01-25T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2019-03-08T00:00:00&#43;00:00">
   
 
   <link rel="shortcut icon" href="/favicon.ico">
@@ -212,8 +212,44 @@
   
   
   <div>
-    <h2><a href="/post/2018-01-25-/">?????????? ????????</a></h2>
+    <h2><a href="/post/building-an-interactive-risk-matrix-using-r/">Building an Interactive Risk Matrix using R</a></h2>
     <div class="article-style">
+      
+      <h1 id="load-libraries">Load libraries</h1>
+
+<p>library(ggplot2)
+library(plotly)
+library(dplyr)</p>
+
+<h1 id="load-the-data">Load the data</h1>
+
+<p>risk &lt;- read.csv(&quot;~/risk.csv&quot;)</p>
+
+<h1 id="creating-heatmap-background-for-risk-matrix">Creating heatmap background for Risk Matrix</h1>
+
+<h1 id="setting-the-score-in-order-to-calculate-the-risk-level">setting the score in order to calculate the risk level</h1>
+
+<p>Likelihood_score &lt;- rep(c(1,2,4,6,12),5)
+Consequence_score &lt;- rep(c(1,2,4,6,12),each=5)
+Likelihood &lt;- rep(c(1:5),5)
+Consequence &lt;- rep(c(1:5),each=5)
+df &lt;- data.frame(Likelihood,Consequence)
+df &lt;- mutate(df, risk_score = Consequence_score * Likelihood_score,
+Risk = case_when(risk_score &gt;= 0 &amp; risk_score &lt; 6 ~ 1,
+risk_score &gt;= 6 &amp; risk_score &lt; 12 ~ 2,
+risk_score &gt;= 12 &amp; risk_score &lt; 32 ~ 3,
+risk_score &gt;= 32 ~ 4) )</p>
+
+<h1 id="plotting-risk-p-lt-ggplot-df-aes-x-likelihood-y-consequence-fill-risk">plotting risk_p&lt;- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+</h1>
+
+<p>geom_tile()+
+scale_fill_gradientn(colours = c(&quot;red&quot;, &quot;orange&quot;,&quot;#EEEE00&quot;,&quot;#008000&quot;),guide=FALSE)+
+scale_x_continuous(trans = &quot;reverse&quot;,name= &quot;Frequency&quot;,breaks = 0:5, expand = c(0, 0))+
+scale_y_continuous(trans = &quot;reverse&quot;,name = &quot;Consequence&quot;,breaks = 0:5, expand = c(0, 0))+
+coord_fixed()+
+theme_bw()+
+geom_hline(yintercept = seq(1.</p>
+
       
     </div>
   </div>
