@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/2018-01-25-/</loc>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/bad-actors-visualization/</loc>
       <lastmod>2018-01-23T00:00:00+00:00</lastmod>
     </url>
@@ -115,6 +124,16 @@
     
     <url>
     
+      <loc>/categories/arabic/</loc>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/bad-actors/</loc>
       <lastmod>2018-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -126,6 +145,7 @@
     <url>
     
       <loc>/categories/</loc>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -154,8 +174,18 @@
     
     <url>
     
+      <loc>/categories/engineerig/</loc>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -185,7 +215,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2018-01-23T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
