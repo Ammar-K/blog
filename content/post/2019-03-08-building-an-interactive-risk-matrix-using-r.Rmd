@@ -9,16 +9,11 @@ tags:
   - R
   - Risk
 header:
-  caption: 'ammar'
-  image: '/post/2019-03-08-building-an-interactive-risk-matrix-using-r_files/risk_matrix.jpg'
+  caption: ''
+  image: 'risk_matrix.jpg'
   preview: yes
 ---
 
-![]("https://neo-reliability.com/img/risk_matrix.jpg")
-
-
-
-![](/post/2019-03-08-building-an-interactive-risk-matrix-using-r_files/risk_matrix.jpg)
 
 # What is Risk Matrix ?
 
@@ -86,7 +81,7 @@ risk_p<- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+
   scale_fill_gradientn(colours = c("red", "orange","#EEEE00","#008000"),guide=FALSE)+
   scale_x_continuous(trans = "reverse",name= "Frequency",breaks = 0:5, expand = c(0, 0))+
   scale_y_continuous(trans = "reverse",name = "Consequence",breaks = 0:5, expand = c(0, 0))+
-  coord_fixed()+
+  #coord_fixed()+
   theme_bw()+
   geom_hline(yintercept = seq(1.5,5.5), color = "white")+
   geom_vline(xintercept = seq(1.5,5.5), color = "white")+
@@ -106,7 +101,7 @@ risk_p<- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+
   scale_color_manual(values = c("#9400D3","#009fdf","#aaaaaa")
   )
 
-config(ggplotly(risk_p,tooltip = "text",width = 650,height = 700), displayModeBar=FALSE, collaborate = FALSE) %>%
+config(ggplotly(risk_p,tooltip = "text",width = 850,height = 700), displayModeBar=FALSE, collaborate = FALSE) %>%
   layout(margin=list(l=90,b=50),
          legend = list(orientation = "h",y = -0.15, x = 0))
 

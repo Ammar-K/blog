@@ -82,7 +82,7 @@
   <meta property="og:site_name" content="neo-Reliability">
   <meta property="og:url" content="/post/bad-actors-visualization/">
   <meta property="og:title" content="Bad Actors Visualization | neo-Reliability">
-  <meta property="og:description" content="">
+  <meta property="og:description" content=""><meta property="og:image" content="/img/badactor.jpg">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-01-23T00:00:00&#43;00:00">
@@ -203,6 +203,11 @@
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  <img src="/img/badactor.jpg" class="article-banner" itemprop="image">
+  
+</div>
+
 
 
   <div class="article-container">
@@ -301,10 +306,6 @@
 <script src="/rmarkdown-libs/d3/d3.min.js"></script>
 
 
-<div class="figure">
-<img src="badactor.jpg" />
-
-</div>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>One day you waked up and decided to solve all the issue in your plants -which is a good thing to do in the morning- you opened the production system and sort out all the big issues, you found out that there are many of these issues, so the next logical step is to select the biggest one of these many issues. One of the ways to do that is a Pareto chart, where we want to find the 20% of the causes that create the 80 of the effect -losses in our case- I’ll claim that there are better ways to find and visualize the bad actors, but first let’s try the Pareto chart.</p>
@@ -545,23 +546,22 @@
 </div>
 </div>
 <div class="sunburst-sidebar">
-<input type="checkbox" class="sunburst-togglelegend">Legend</input>
+<input type="checkbox" class="sunburst-togglelegend" style="visibility:hidden;">Legend</input>
 <div class="sunburst-legend" style="visibility:hidden;"></div>
 </div>
 </div>
 </div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"data":{"children":[{"name":"P1","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P3423","size":6051,"colname":"X5"},{"name":"P3659A","size":4062,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Catalyst & Process Media","children":[{"name":"NA","children":[],"size":16101,"colname":"X4"}],"colname":"X3"},{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":1132052,"colname":"X4"}],"colname":"X3"},{"name":"Process Upset","children":[{"name":"A3635A","children":[],"size":11450,"colname":"X4"},{"name":"C3620","children":[],"size":6217,"colname":"X4"},{"name":"V3651","children":[],"size":40381,"colname":"X4"},{"name":"V3653","children":[],"size":16209,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P2","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P1111","size":49491,"colname":"X5"},{"name":"P5000","size":30554,"colname":"X5"},{"name":"P5012","size":12253,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"E5031","size":34520,"colname":"X5"}],"colname":"X4"}],"colname":"X3"},{"name":"Process Control","children":[{"name":"TT0260","children":[],"size":19243,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Process Upset","children":[{"name":"LT0086","children":[],"size":12426,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P3","children":[{"name":"Equipment","children":[{"name":"Electrical","children":[{"name":"SW1111","children":[],"size":484863,"colname":"X4"}],"colname":"X3"},{"name":"Instrument","children":[{"name":"FV3215","children":[],"size":10316,"colname":"X4"},{"name":"HV1111","children":[],"size":157313,"colname":"X4"},{"name":"HV1626","children":[],"size":464624,"colname":"X4"},{"name":"LV2205","children":[],"size":10732,"colname":"X4"}],"colname":"X3"},{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"K1111","size":14010,"colname":"X5"}],"colname":"X4"}],"colname":"X3"},{"name":"Process Control","children":[{"name":"PV2222","children":[],"size":241197,"colname":"X4"},{"name":"V1111","children":[],"size":142560,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":272471,"colname":"X4"}],"colname":"X3"},{"name":"Process Upset","children":[{"name":"R1111","children":[],"size":423635,"colname":"X4"},{"name":"R2110","children":[],"size":35079,"colname":"X4"},{"name":"R2222","children":[],"size":564901,"colname":"X4"},{"name":"V2590","children":[],"size":10751,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P4","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P1234","size":18186,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"E4615","size":125907,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":356110,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P5","children":[{"name":"Equipment","children":[{"name":"Instrument","children":[{"name":"FV1111","children":[],"size":124980,"colname":"X4"},{"name":"PV1234","children":[],"size":151692,"colname":"X4"}],"colname":"X3"},{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"C1100","size":2600137,"colname":"X5"},{"name":"CT1100","size":1300519,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"V1201","size":1299618,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Human","children":[{"name":"Human Factor","children":[{"name":"NA","children":[],"size":1877205,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Process Upset","children":[{"name":"H1115","children":[],"size":47315,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"}],"name":"root"},"options":{"legendOrder":null,"colors":["#118ffd","orange","#98a6ad"],"valueField":"size","percent":true,"count":true,"explanation":null,"breadcrumb":[],"legend":[],"sortFunction":null}},"evals":[],"jsHooks":{"render":[{"code":"\n    function(el, x) {\n    d3.selectAll('.sunburst').style('fill', 'white')\n    d3.selectAll('.sunburst text').style('fill', 'white')\n    d3.selectAll('.sunburst-explanation').style('color', 'white')\n;\n    }\n    ","data":null}]}}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":{"children":[{"name":"P1","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P3423","size":6051,"colname":"X5"},{"name":"P3659A","size":4062,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Catalyst & Process Media","children":[{"name":"NA","children":[],"size":16101,"colname":"X4"}],"colname":"X3"},{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":1132052,"colname":"X4"}],"colname":"X3"},{"name":"Process Upset","children":[{"name":"A3635A","children":[],"size":11450,"colname":"X4"},{"name":"C3620","children":[],"size":6217,"colname":"X4"},{"name":"V3651","children":[],"size":40381,"colname":"X4"},{"name":"V3653","children":[],"size":16209,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P2","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P1111","size":49491,"colname":"X5"},{"name":"P5000","size":30554,"colname":"X5"},{"name":"P5012","size":12253,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"E5031","size":34520,"colname":"X5"}],"colname":"X4"}],"colname":"X3"},{"name":"Process Control","children":[{"name":"TT0260","children":[],"size":19243,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Process Upset","children":[{"name":"LT0086","children":[],"size":12426,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P3","children":[{"name":"Equipment","children":[{"name":"Electrical","children":[{"name":"SW1111","children":[],"size":484863,"colname":"X4"}],"colname":"X3"},{"name":"Instrument","children":[{"name":"FV3215","children":[],"size":10316,"colname":"X4"},{"name":"HV1111","children":[],"size":157313,"colname":"X4"},{"name":"HV1626","children":[],"size":464624,"colname":"X4"},{"name":"LV2205","children":[],"size":10732,"colname":"X4"}],"colname":"X3"},{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"K1111","size":14010,"colname":"X5"}],"colname":"X4"}],"colname":"X3"},{"name":"Process Control","children":[{"name":"PV2222","children":[],"size":241197,"colname":"X4"},{"name":"V1111","children":[],"size":142560,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":272471,"colname":"X4"}],"colname":"X3"},{"name":"Process Upset","children":[{"name":"R1111","children":[],"size":423635,"colname":"X4"},{"name":"R2110","children":[],"size":35079,"colname":"X4"},{"name":"R2222","children":[],"size":564901,"colname":"X4"},{"name":"V2590","children":[],"size":10751,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P4","children":[{"name":"Equipment","children":[{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"P1234","size":18186,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"E4615","size":125907,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Plant Startup","children":[{"name":"NA","children":[],"size":356110,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"},{"name":"P5","children":[{"name":"Equipment","children":[{"name":"Instrument","children":[{"name":"FV1111","children":[],"size":124980,"colname":"X4"},{"name":"PV1234","children":[],"size":151692,"colname":"X4"}],"colname":"X3"},{"name":"Mechanical ","children":[{"name":" Rotating","children":[{"name":"C1100","size":2600137,"colname":"X5"},{"name":"CT1100","size":1300519,"colname":"X5"}],"colname":"X4"},{"name":" Stationary","children":[{"name":"V1201","size":1299618,"colname":"X5"}],"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Human","children":[{"name":"Human Factor","children":[{"name":"NA","children":[],"size":1877205,"colname":"X4"}],"colname":"X3"}],"colname":"X2"},{"name":"Process","children":[{"name":"Process Upset","children":[{"name":"H1115","children":[],"size":47315,"colname":"X4"}],"colname":"X3"}],"colname":"X2"}],"colname":"X1"}],"name":"root"},"options":{"legendOrder":null,"colors":["#118ffd","orange","#98a6ad"],"valueField":"size","percent":true,"count":true,"explanation":null,"breadcrumb":[],"legend":[],"sortFunction":null,"sumNodes":true}},"evals":[],"jsHooks":{"render":[{"code":"\n    function(el, x) {\n    d3.selectAll('.sunburst').style('fill', 'white')\n    d3.selectAll('.sunburst text').style('fill', 'white')\n    d3.selectAll('.sunburst-explanation').style('color', 'white')\n;\n    }\n    ","data":null}]}}</script>
 <div id="the-code" class="section level2">
 <h2>The code</h2>
 <pre class="r"><code>library(sunburstR)
 library(dplyr)
-production$Asset &lt;- gsub(&quot;-&quot;, &quot;&quot;, production$Asset)
-production$con &lt;- paste(production$Plant, production$Category, production$Type, 
-    production$Asset, sep = &quot;-&quot;)
+production$Asset&lt;- gsub(&quot;-&quot;,&quot;&quot;,production$Asset)
+production$con &lt;- paste(production$Plant,production$Category,production$Type,production$Asset,sep = &quot;-&quot;)
 keep &lt;- c(&quot;Cost&quot;, &quot;con&quot;)
 production2 &lt;- production[keep]
-production2 &lt;- production2[c(2, 1)]
-production2 &lt;- production2 %&gt;% group_by(con) %&gt;% summarise(Cost = sum(Cost))
+production2 &lt;- production2[c(2,1)]
+production2 &lt;- production2 %&gt;% group_by(con) %&gt;% summarise(Cost =sum(Cost))
 sunburst(production2, count = T)</code></pre>
 </div>
 </div>
