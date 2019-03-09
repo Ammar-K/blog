@@ -9,10 +9,48 @@ tags:
   - R
   - Risk
 header:
-  caption: ''
-  image: ''
+  caption: 'ammar'
+  image: '/post/2019-03-08-building-an-interactive-risk-matrix-using-r_files/risk_matrix.jpg'
   preview: yes
 ---
+
+![]("https://neo-reliability.com/img/risk_matrix.jpg")
+
+
+
+![](/post/2019-03-08-building-an-interactive-risk-matrix-using-r_files/risk_matrix.jpg)
+
+# What is Risk Matrix ?
+
+Risk Matrix is an illustration to show the organization risk apatite, and draw the border line (threshold) between risk levels.
+The green area is where you want your risk to be eventually.
+
+so... risk matrix in the context of this post is **a reporting tool**.
+
+Sometime the risk matrix is defined as a tool to evaluate risk... and that is a dangerous thing to do (reference)
+
+# What will we do today
+
+In the this example, the risk matrix is used as a tool to visualize the risk in an interactive way.
+
+I'll include few things:
+
+- Title
+- Risk (Risk Level)
+- Type (category of risk)
+- Interim (Interim Action)
+- Consequence
+- Likelihood
+
+
+Another parameter can be:-
+
+- Status 
+- Control/Mitigation
+- Owner
+- Event (the description of what could go wrong)
+- Date (identification - closure - approval)
+- Risk Treatment type (acceptance -transfer - reduce likelihood - reduce consequence)
 
 
 
@@ -25,7 +63,7 @@ library(dplyr)
 
 # Load the data
 
-risk <- read.csv("~/risk.csv")
+risk <- read.csv("https://neo-reliability.com/files/risk.csv")
 
 # Creating heatmap background for Risk Matrix
 
@@ -52,7 +90,7 @@ risk_p<- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+
   theme_bw()+
   geom_hline(yintercept = seq(1.5,5.5), color = "white")+
   geom_vline(xintercept = seq(1.5,5.5), color = "white")+
-  #ggtitle("SAFER per Risk Assessment")+
+  ggtitle("5 X 5 Interactive Risk Matrix")+
   theme(legend.position="bottom")+
   guides(color=guide_legend(title="Selected Plants"))+
   geom_jitter(data = risk,

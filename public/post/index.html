@@ -215,6 +215,10 @@
 <div class="article-list-item" itemscope itemprop="blogPost">
   
   
+  <a href="/post/building-an-interactive-risk-matrix-using-r/">
+    <img src="/img//post/2019-03-08-building-an-interactive-risk-matrix-using-r_files/risk_matrix.jpg" class="article-banner" itemprop="image">
+  </a>
+  
   <h3 class="article-title" itemprop="name">
     <a href="/post/building-an-interactive-risk-matrix-using-r/" itemprop="url">Building an Interactive Risk Matrix using R</a>
   </h3>
@@ -232,7 +236,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -262,7 +266,9 @@
 
   <div class="article-style" itemprop="articleBody">
     
-    # Load librarieslibrary(ggplot2)library(plotly)library(dplyr)# Load the datarisk &lt;- read.csv(&quot;~/risk.csv&quot;)# Creating heatmap background for Risk Matrix# setting the score in order to calculate the risk levelLikelihood_score &lt;- rep(c(1,2,4,6,12),5)Consequence_score &lt;- rep(c(1,2,4,6,12),each=5)Likelihood &lt;- rep(c(1:5),5)Consequence &lt;- rep(c(1:5),each=5)df &lt;- data.frame(Likelihood,Consequence)df &lt;- mutate(df, risk_score = Consequence_score * Likelihood_score,Risk = case_when(risk_score &gt;= 0 &amp; risk_score &lt; 6 ~ 1,risk_score &gt;= 6 &amp; risk_score &lt; 12 ~ 2,risk_score &gt;= 12 &amp; risk_score &lt; 32 ~ 3,risk_score &gt;= 32 ~ 4) )# plotting risk_p&lt;- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+geom_tile()+scale_fill_gradientn(colours = c(&quot;red&quot;, &quot;orange&quot;,&quot;#EEEE00&quot;,&quot;#008000&quot;),guide=FALSE)+scale_x_continuous(trans = &quot;reverse&quot;,name= &quot;Frequency&quot;,breaks = 0:5, expand = c(0, 0))+scale_y_continuous(trans = &quot;reverse&quot;,name = &quot;Consequence&quot;,breaks = 0:5, expand = c(0, 0))+coord_fixed()+theme_bw()+geom_hline(yintercept = seq(1.
+    What is Risk Matrix ?Risk Matrix is an illustration to show the organization risk apatite, and draw the border line (threshold) between risk levels. The green area is where you want your risk to be eventually.
+so… risk matrix in the context of this post is a reporting tool.
+Sometime the risk matrix is defined as a tool to evaluate risk… and that is a dangerous thing to do (reference)
     
   </div>
   <p class="read-more">
