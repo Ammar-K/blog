@@ -29,7 +29,7 @@ so... risk matrix in the context of this post is **a reporting tool**.
 
 In the this example, the risk matrix is used as a tool to visualize the risk in an interactive way.
 
-I'll include few fields from the risk regestier:
+I'll include few fields from the risk register:
 
 - Title
 - Risk (Risk Level)
@@ -39,7 +39,7 @@ I'll include few fields from the risk regestier:
 - Likelihood
 
 
-Another fileds can be:-
+Another fields can be:-
 
 - Status 
 - Control/Mitigation
@@ -47,9 +47,6 @@ Another fileds can be:-
 - Event (the description of what could go wrong)
 - Date (identification - closure - approval)
 - Risk Treatment type (acceptance -transfer - reduce likelihood - reduce consequence)
-
-# Code
-=======
 
 # Code 
 
