@@ -48,6 +48,9 @@ Another fileds can be:-
 - Risk Treatment type (acceptance -transfer - reduce likelihood - reduce consequence)
 
 
+# Code 
+
+This work inspired by the work of [David Meza](https://knowledger.rbind.io/post/creating-a-risk-matrix-in-r/) 
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # Load libraries
