@@ -22,7 +22,11 @@ The green area is where you want your risk to be eventually.
 
 so... risk matrix in the context of this post is **a reporting tool**.
 
+<<<<<<< HEAD
 > Sometime the risk matrix is defined as a tool to evaluate risk... and that is a dangerous thing to do, [see](https://kazarians.com/wp-content/uploads/2018/03/Busby_Risk-Matrix-Pitfalls_180302.pdf)
+=======
+> Sometime the risk matrix is defined as a tool to evaluate risk... and that is a dangerous thing to do, [see here](https://kazarians.com/wp-content/uploads/2018/03/Busby_Risk-Matrix-Pitfalls_180302.pdf)
+>>>>>>> dc1f113b1e9b59f34f20f648729fdfba718700d0
 
 # What will we do today
 
@@ -47,7 +51,14 @@ Another fileds can be:-
 - Date (identification - closure - approval)
 - Risk Treatment type (acceptance -transfer - reduce likelihood - reduce consequence)
 
+<<<<<<< HEAD
 # Code
+=======
+
+# Code 
+
+This work inspired by the work of [David Meza](https://knowledger.rbind.io/post/creating-a-risk-matrix-in-r/) 
+>>>>>>> dc1f113b1e9b59f34f20f648729fdfba718700d0
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # Load libraries
@@ -101,7 +112,7 @@ risk_p<- ggplot(df,aes(x =Likelihood, y =Consequence, fill=Risk))+
   scale_color_manual(values = c("#9400D3","#009fdf","#aaaaaa")
   )
 
-config(ggplotly(risk_p,tooltip = "text"), displayModeBar=FALSE, collaborate = FALSE) %>%
+config(ggplotly(risk_p,tooltip = "text", width = 750,height = 750), displayModeBar=FALSE, collaborate = FALSE) %>%
   layout(margin=list(l=90,b=50),
          legend = list(orientation = "h",y = -0.15, x = 0))
 

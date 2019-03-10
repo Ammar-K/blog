@@ -1,6 +1,4 @@
 
-
-
   
 /*************************************************
  *  Hugo Academic: an academic theme for Hugo.
@@ -471,10 +469,10 @@ article {
   padding: 1rem 20px 0 20px;
   margin: 0 auto 0 auto;
 }
-
 .article-header {
-  position: relative;
-  clear: both;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .article-banner {
